@@ -1,0 +1,236 @@
+.home-page {
+    padding-top: 0;
+}
+
+/* Section Styling */
+.section-header {
+    margin-bottom: var(--space-3xl);
+}
+
+.section-badge {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-leaf);
+    margin-bottom: var(--space-md);
+}
+
+.section-header h2 {
+    margin-bottom: var(--space-md);
+}
+
+.section-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+}
+
+/* Features Section */
+.features-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.features-grid {
+    gap: var(--space-xl);
+}
+
+.feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    text-decoration: none;
+    animation: fadeIn 0.6s ease backwards;
+    animation-delay: var(--delay);
+}
+
+.feature-card:hover {
+    border-color: var(--feature-color);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.feature-card:hover .feature-arrow {
+    transform: translateX(5px);
+    color: var(--feature-color);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    transition: all var(--transition-normal);
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h3 {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+}
+
+.feature-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.feature-arrow {
+    font-size: 1.5rem;
+    color: var(--neutral-500);
+    transition: all var(--transition-fast);
+    align-self: center;
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(180deg, transparent 0%, rgba(45, 90, 39, 0.1) 50%, transparent 100%);
+}
+
+.stats-grid {
+    gap: var(--space-xl);
+}
+
+/* How It Works Section */
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.step-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    padding: var(--space-2xl);
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: var(--space-md);
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+}
+
+.step-content p {
+    font-size: 0.9rem;
+}
+
+.step-connector {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-forest), var(--primary-leaf));
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .step-connector {
+        display: none;
+    }
+
+    .steps-container {
+        flex-direction: column;
+    }
+}
+
+/* CTA Section */
+.cta-section {
+    padding-bottom: var(--space-xl);
+}
+
+.cta-card {
+    position: relative;
+    text-align: center;
+    padding: var(--space-3xl);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(45, 90, 39, 0.3) 0%, rgba(76, 175, 80, 0.1) 100%);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-card h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-md);
+}
+
+.cta-card p {
+    font-size: 1.125rem;
+    color: var(--neutral-300);
+    max-width: 500px;
+    margin: 0 auto var(--space-xl);
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.cta-decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.cta-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.cta-circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.cta-circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: 10%;
+    animation: pulse 4s ease-in-out infinite 1s;
+}
+
+.cta-circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: -30px;
+    animation: pulse 4s ease-in-out infinite 2s;
+}

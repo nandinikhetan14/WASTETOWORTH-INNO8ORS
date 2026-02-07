@@ -1,0 +1,253 @@
+.dashboard-page .page-header {
+    margin-bottom: var(--space-2xl);
+}
+
+.dashboard-stats {
+    margin-bottom: var(--space-2xl);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.dashboard-card {
+    padding: var(--space-xl);
+}
+
+.dashboard-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-lg);
+}
+
+.no-data {
+    text-align: center;
+    color: var(--neutral-500);
+    padding: var(--space-2xl);
+}
+
+/* Bar Chart */
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.bar-item {
+    animation: fadeIn 0.5s ease backwards;
+    animation-delay: var(--delay);
+}
+
+.bar-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+    font-size: 0.875rem;
+}
+
+.bar-label span:first-child {
+    color: var(--neutral-300);
+}
+
+.bar-count {
+    color: var(--neutral-500);
+}
+
+.bar-track {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--space-xs);
+}
+
+.bar-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+
+.bar-percentage {
+    font-size: 0.75rem;
+    color: var(--neutral-500);
+}
+
+/* Activity List */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+}
+
+.activity-icon {
+    font-size: 1.25rem;
+}
+
+.activity-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-title {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--neutral-300);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: var(--neutral-500);
+}
+
+/* Status Cards */
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.status-card {
+    text-align: center;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+}
+
+.status-card.warning {
+    background: rgba(255, 160, 0, 0.1);
+}
+
+.status-card.success {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.status-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.status-card.warning .status-num {
+    color: var(--accent-amber);
+}
+
+.status-card.success .status-num {
+    color: var(--primary-leaf);
+}
+
+.status-label {
+    font-size: 0.75rem;
+    color: var(--neutral-400);
+}
+
+.resolution-rate {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: 0.875rem;
+    color: var(--neutral-400);
+}
+
+.rate-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.rate-fill {
+    height: 100%;
+    background: var(--primary-leaf);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+
+.rate-value {
+    font-weight: 600;
+    color: var(--primary-leaf);
+}
+
+/* Impact Card */
+.impact-card {
+    grid-column: span 2;
+}
+
+.impact-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+}
+
+.impact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: var(--radius-md);
+}
+
+.impact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.impact-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-leaf);
+}
+
+.impact-label {
+    font-size: 0.75rem;
+    color: var(--neutral-400);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-card {
+        grid-column: span 1;
+    }
+
+    .impact-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .status-cards {
+        grid-template-columns: 1fr;
+    }
+}
